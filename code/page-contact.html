@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PAGE-CONTACT</title>
+    <link rel="stylesheet" href="index.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Exo:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    
+    <script defer src="./component/header.js"></script>
+    <script defer src="./component/footer.js"></script>
+    <script defer src="index.js"></script>
+
+</head>
+<body>
+    <div id="scroll-to-top"></div>
+    <div class="back-to-top" id="back-to-top">
+        <img src="image/Frame 73.png">
+    </div>
+
+    <header id="page-header"></header>
+
+    <div class="sub-header-container">
+        <div style="display: flex; gap: 10px; font-family: jost; width: 1290px;">
+            <div>Homepage</div>
+            <img src="image/right-arrow.png">
+            <div>Contact</div>
+        </div>
+    </div>
+
+    <main class="address-container">
+        <div class="address-text">
+            <h1>Need A Direct Line?</h1>
+            <p>Cras massa et odio donec faucibus in. Vitae pretium massa dolor ullamcorper lectus elit quam.</p>
+            <div style="display: flex; gap: 20px; align-items: center;">
+                <img src="image/phone icon.png">
+                <div style="display: flex; flex-direction: column; gap: 5px;">
+                    <div>Phone</div>
+                    <div style="font-weight: 600;">(123) 456 7890</div>
+                </div>
+            </div>
+            <div style="display: flex; gap: 20px; align-items: center;">
+                <img src="image/email icon.png">
+                <div style="display: flex; flex-direction: column; gap: 5px;">
+                    <div>Email</div>
+                    <div style="font-weight: 600;">contact@thimpress.com</div>
+                </div>
+            </div>
+        </div>
+        <div class="address-map">
+            <img src="image/Map.png">
+        </div>
+    </main>
+    <div class="contact-us-form">
+        <div style="font-weight: 600; font-size: 24px;">Contact Us</div>
+        <div style="font-family: jost; font-size: 18px; font-weight: 400; ">Your email address will not be
+            published. Required fields are marked *</div>
+        <div class="form-container">
+            <input type="text" placeholder="Name*" class="name-input">
+            <input type="email" placeholder="Email*" class="email-input">
+            <input type="text" placeholder="Comment" class="comment-input">
+        </div>
+        <div>
+            <input type="checkbox" name="save-name">
+            <label for="save-name">Save my name, email in this brower for the next time I comment</label>
+        </div>
+        <button class="post-comment-button" style="font-family: jost">
+            Post Comment
+        </button>
+    </div>
+    
+    <footer id="page-footer"></footer>
+</body>
+</html>

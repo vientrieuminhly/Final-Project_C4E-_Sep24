@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LOGIN-REGISTER</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Exo:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    
+    <script defer src="./component/header.js"></script>
+    <script defer src="./component/footer.js"></script>
+    <script defer src="index.js"></script>
+
+</head>
+<body>
+    <div id="scroll-to-top"></div>
+    <div class="back-to-top" id="back-to-top">
+        <img src="image/Frame 73.png">
+    </div>
+    <header id="page-header"></header>
+    <div class="sub-header-container">
+        <div style="display: flex; gap: 10px; font-family: jost; width: 1290px;">
+            <div>Homepage</div>
+            <img src="image/right-arrow.png">
+            <div>Login/Register</div>
+        </div>
+    </div>
+    <main class="login-form-container">
+        <div class="login-form">
+            <h1>Login</h1>
+            <input type="text" placeholder="Email or username*" class="login-input" style="font-family: jost;">
+            <div style="position: relative;">
+                <input type="password" placeholder="Password*" class="password-input" style="font-family: jost;" id="password1">
+                <i class="fa-solid fa-eye-slash toggle-password" data-input="password1"></i>
+            </div>
+
+            <div>
+                <input type="checkbox" name="save-name">
+                <label for="save-name" style="font-family: jost;">Remember me</label>
+            </div>
+            <button class="login-button" style="font-family: jost;">Login</button>
+            <div style="font-family: jost; font-size: 18px; font-weight: 600;">Lost your password ?</div>
+        </div>
+        <div class="login-form">
+            <h1>Register</h1>
+            <input type="text" placeholder="Email*" class="login-input" style="font-family: jost;">
+            <input type="text" placeholder="Username*" class="login-input" style="font-family: jost;">
+            <div style="position: relative;">
+                <input type="password" placeholder="Password*" class="password-input" style="font-family: jost;" id="password2">
+                <i class="fa-solid fa-eye-slash toggle-password" data-input="password2"></i>
+            </div>
+            <div style="position: relative;">
+                <input type="password" placeholder="Confirm Password*" class="password-input" style="font-family: jost;" id="password3">
+                <i class="fa-solid fa-eye-slash toggle-password" data-input="password3"></i>
+            </div>
+            <button class="login-button" style="font-family: jost;">Register</button>
+        </div>
+        <script>
+            const togglePasswordIcons = document.querySelectorAll('.toggle-password');
+          
+            togglePasswordIcons.forEach(function(icon) {
+              icon.addEventListener('click', function() {
+                const inputId = this.getAttribute('data-input');
+                const inputField = document.getElementById(inputId);
+          
+                if (inputField.type === 'password') {
+                  inputField.type = 'text';
+                  this.classList.remove('fa-eye-slash');
+                  this.classList.add('fa-eye');
+                } else {
+                  inputField.type = 'password';
+                  this.classList.remove('fa-eye');
+                  this.classList.add('fa-eye-slash');
+                }
+              });
+            });
+        </script>
+    </main>
+    <footer id="page-footer"></footer>
+</body>
+</html>
